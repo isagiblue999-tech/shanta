@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Curiousity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="curiousity.css">
+</head>
+
+<body>
+
+<div class="ai-box">
+
+  <button class="curious-back-btn" onclick="smartBack()">⟵ SARI GURU</button>
+
+  <img src="item.png" class="curious-img">
+
+  <div class="curious-text">
+    <span>ohh really ??</span>
+    <span>Curious to visit this site</span>
+    <span>then go back and tap first option</span>
+    <span>enter given password by Admin</span>
+  </div>
+
+</div>
+
+<script>
+function smartBack(){
+  history.length > 1 ? history.back() : location.href="index.html";
+}
+</script>
+
+</body>
+</html>

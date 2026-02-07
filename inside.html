@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AMUL_HAMSTER</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="inside.css">
+</head>
+
+<body>
+
+<div class="ai-box">
+
+  <div class="avatar">
+    <img src="dp.png">
+    <div class="avatar-name">AMUL_HAMSTER</div>
+    <button class="inside-back-btn" onclick="smartBack()">HOME PAGE 
+
+    </div>
+
+  <div class="chat">
+    <div class="video-grid">
+
+      <div class="video-card">
+        <video controls>
+          <source src="video1.mp4" type="video/mp4">
+        </video>
+        <div class="video-title blood">Lulli Dance</div>
+      </div>
+
+      <div class="video-card">
+        <video controls>
+          <source src="video2.mp4" type="video/mp4">
+        </video>
+        <div class="video-title blood">Kulcha Fafda</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<script>
+    function smartBack() {
+      if (document.referrer && document.referrer !== "") {
+        window.location.href = document.referrer;
+      } else if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = "index.html";
+      }
+    }
+    </script>
+    
+    
+</body>
+</html>

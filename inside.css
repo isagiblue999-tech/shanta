@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #0f2027, #000);
+    font-family: "Segoe UI", sans-serif;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: #00fff7;
+    overflow-y: auto;
+  }
+  
+  /* MAIN CONTAINER */
+  .ai-box {
+    width: 380px;
+    height: 560px;
+    background:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.35)),
+      url("bg.png") center / cover no-repeat;
+    border: 1px solid #00fff7;
+    box-shadow: 0 0 30px rgba(0,255,247,0.6);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  /* HEADER */
+  .avatar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(0,0,0,0.7);
+    border-bottom: 1px solid #00fff7;
+  }
+  
+  .avatar img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid #00fff7;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0,255,247,0.6);
+    animation: dpRotate 6s linear infinite;
+  }
+  
+  .avatar-name {
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+  }
+  
+  /* EMPTY CONTENT AREA */
+  .chat {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* ROTATION */
+  @keyframes dpRotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  /* VIDEO GRID */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  
+  /* MOBILE FIRST */
+  @media (max-width: 600px) {
+    .video-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* VIDEO CARD */
+  .video-card {
+    background: rgba(0,0,0,0.55);
+    border: 1px solid rgba(0,255,247,0.3);
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 0 14px rgba(0,255,247,0.25);
+  }
+  
+  /* VIDEO ELEMENT */
+  .video-card video {
+    width: 100%;
+    border-radius: 8px;
+    outline: none;
+  }
+  
+  /* TITLE */
+  .video-title {
+    margin-top: 6px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    opacity: 0.85;
+    text-align: center;
+  }
+  /* BLOOD THRILLER TITLE */
+.video-title.blood {
+    color: #b00020; /* deep blood red */
+    font-weight: 700;
+    text-shadow:
+      0 0 4px rgba(176, 0, 32, 0.6),
+      0 0 10px rgba(120, 0, 20, 0.8);
+    letter-spacing: 1.5px;
+  }
+  
+  /* SUBTLE FLICKER (cinematic, not annoying) */
+  .video-title.blood {
+    animation: bloodFlicker 3.5s infinite;
+  }
+  
+  @keyframes bloodFlicker {
+    0%, 100% {
+      opacity: 1;
+    }
+    92% {
+      opacity: 0.85;
+    }
+    95% {
+      opacity: 0.6;
+    }
+    97% {
+      opacity: 0.9;
+    }
+  }
+ /* BACK BUTTON (INSIDE PAGE) */
+.inside-back-btn {
+    margin-left: auto; /* pushes button to right */
+    background: transparent;
+    border: 1px solid rgba(0,255,247,0.6);
+    color: #00fff7;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,255,247,0.3);
+    transition: all 0.25s ease;
+  }
+  
+  /* HOVER (PC) */
+  @media (hover: hover) {
+    .inside-back-btn:hover {
+      background: #00fff7;
+      color: #000;
+      box-shadow: 0 0 16px rgba(0,255,247,0.9);
+      transform: translateX(-2px);
+    }
+  }
+  html, body {
+    margin: 0;
+    height: 100%;
+  }
+  
+  body {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* DESKTOP */
+  .ai-box {
+    width: 380px;
+    height: 560px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+  }
+  
+  /* IMAGE */
+  .curious-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  /* TEXT */
+  .curious-text {
+    position: absolute;
+    bottom: 8%;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .curious-text span {
+    display: block;
+    color: #b00020;
+    font-weight: 800;
+    text-shadow: 0 0 10px red;
+  }
+  
+  /* BACK BUTTON */
+  .curious-back-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+  }
+  
+  /* MOBILE = FULL SCREEN */
+  @media (max-width: 600px) {
+    body {
+      display: block;
+      min-height: 100vh;
+      overflow-y: auto;
+    }
+  
+    .ai-box {
+      height: auto !important;
+      min-height: 100vh;
+      /* overflow-y: auto; */
+    }
+  }
+   
+  
